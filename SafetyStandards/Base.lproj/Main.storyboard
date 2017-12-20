@@ -48,7 +48,14 @@
                             <outlet property="delegate" destination="uCX-fE-9dg" id="9Hf-Oh-gsp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Anesthesia Safety Standards" id="Inl-Wp-1J1"/>
+                    <navigationItem key="navigationItem" title="Anesthesia Safety Standards" id="Inl-Wp-1J1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ebr-JB-7pF">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="uCX-fE-9dg" id="0YC-fW-N8W"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CNY-0C-tFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,7 +71,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="27"/>
+                            <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="23"/>
                             <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
