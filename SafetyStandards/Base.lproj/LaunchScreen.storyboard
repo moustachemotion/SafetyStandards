@@ -1,10 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Baskerville.ttc">
+            <string>Baskerville</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -13,13 +22,52 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingScreen" translatesAutoresizingMaskIntoConstraints="NO" id="FvR-Fg-Yz8">
+                                <rect key="frame" x="0.0" y="269" width="375" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The following guidelines are based on accredited standards of care.  The information is for educational purposes only." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDq-Nd-uK1">
+                                <rect key="frame" x="29" y="477" width="317" height="190"/>
+                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CNMC_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="vUm-K7-1SO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="106"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="kwp-hf-c50"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.69913870096206665" green="0.86829060316085815" blue="0.79949074983596802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TDq-Nd-uK1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="04g-bg-ell"/>
+                            <constraint firstItem="TDq-Nd-uK1" firstAttribute="top" secondItem="FvR-Fg-Yz8" secondAttribute="bottom" constant="80" id="1gy-en-DYO"/>
+                            <constraint firstItem="vUm-K7-1SO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6Ab-dL-Tws"/>
+                            <constraint firstItem="vUm-K7-1SO" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="9Rf-i7-XPV"/>
+                            <constraint firstItem="FvR-Fg-Yz8" firstAttribute="centerX" secondItem="TDq-Nd-uK1" secondAttribute="centerX" id="Eb6-vJ-W7d"/>
+                            <constraint firstItem="FvR-Fg-Yz8" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="IA8-D8-vNL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vUm-K7-1SO" secondAttribute="trailing" id="JkQ-7l-fBG"/>
+                            <constraint firstItem="vUm-K7-1SO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KUo-HR-Do7"/>
+                            <constraint firstItem="TDq-Nd-uK1" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="S7S-HL-IKh"/>
+                            <constraint firstItem="FvR-Fg-Yz8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="249" id="Sey-i7-qwi"/>
+                            <constraint firstItem="FvR-Fg-Yz8" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="aRf-TO-23T"/>
+                            <constraint firstItem="vUm-K7-1SO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bI7-Ul-29G"/>
+                            <constraint firstItem="vUm-K7-1SO" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="lBQ-1l-ipc"/>
+                            <constraint firstItem="TDq-Nd-uK1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="lwM-Xf-0Bc"/>
+                            <constraint firstItem="vUm-K7-1SO" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="pTy-fX-eb6"/>
+                            <constraint firstAttribute="trailing" secondItem="FvR-Fg-Yz8" secondAttribute="trailing" id="q0c-37-EVa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CNMC_Logo" width="324" height="106"/>
+        <image name="loadingScreen" width="2250" height="2250"/>
+    </resources>
 </document>
