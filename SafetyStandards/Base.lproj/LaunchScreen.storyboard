@@ -25,6 +25,9 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingScreen" translatesAutoresizingMaskIntoConstraints="NO" id="FvR-Fg-Yz8">
                                 <rect key="frame" x="0.0" y="269" width="375" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="6P3-Xz-hbO"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The following guidelines are based on accredited standards of care.  The information is for educational purposes only." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDq-Nd-uK1">
                                 <rect key="frame" x="29" y="477" width="317" height="190"/>
@@ -33,30 +36,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CNMC_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="vUm-K7-1SO">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="106"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="106" id="kwp-hf-c50"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="50" width="375" height="106"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.69913870096206665" green="0.86829060316085815" blue="0.79949074983596802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="TDq-Nd-uK1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="04g-bg-ell"/>
-                            <constraint firstItem="TDq-Nd-uK1" firstAttribute="top" secondItem="FvR-Fg-Yz8" secondAttribute="bottom" constant="80" id="1gy-en-DYO"/>
-                            <constraint firstItem="vUm-K7-1SO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6Ab-dL-Tws"/>
-                            <constraint firstItem="vUm-K7-1SO" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="9Rf-i7-XPV"/>
-                            <constraint firstItem="FvR-Fg-Yz8" firstAttribute="centerX" secondItem="TDq-Nd-uK1" secondAttribute="centerX" id="Eb6-vJ-W7d"/>
-                            <constraint firstItem="FvR-Fg-Yz8" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="IA8-D8-vNL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vUm-K7-1SO" secondAttribute="trailing" id="JkQ-7l-fBG"/>
-                            <constraint firstItem="vUm-K7-1SO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KUo-HR-Do7"/>
-                            <constraint firstItem="TDq-Nd-uK1" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="S7S-HL-IKh"/>
-                            <constraint firstItem="FvR-Fg-Yz8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="249" id="Sey-i7-qwi"/>
-                            <constraint firstItem="FvR-Fg-Yz8" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="aRf-TO-23T"/>
-                            <constraint firstItem="vUm-K7-1SO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bI7-Ul-29G"/>
-                            <constraint firstItem="vUm-K7-1SO" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="lBQ-1l-ipc"/>
-                            <constraint firstItem="TDq-Nd-uK1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="lwM-Xf-0Bc"/>
-                            <constraint firstItem="vUm-K7-1SO" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="pTy-fX-eb6"/>
-                            <constraint firstAttribute="trailing" secondItem="FvR-Fg-Yz8" secondAttribute="trailing" id="q0c-37-EVa"/>
+                            <constraint firstItem="vUm-K7-1SO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="AF5-LJ-LX2"/>
+                            <constraint firstItem="vUm-K7-1SO" firstAttribute="leading" secondItem="FvR-Fg-Yz8" secondAttribute="leading" id="Afk-gY-voa"/>
+                            <constraint firstItem="FvR-Fg-Yz8" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="F3H-DF-9jt"/>
+                            <constraint firstAttribute="trailing" secondItem="vUm-K7-1SO" secondAttribute="trailing" id="RJL-5K-eqJ"/>
+                            <constraint firstItem="TDq-Nd-uK1" firstAttribute="top" secondItem="FvR-Fg-Yz8" secondAttribute="bottom" constant="80" id="bCb-PH-T3e"/>
+                            <constraint firstItem="vUm-K7-1SO" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="keU-tQ-Vjd"/>
+                            <constraint firstItem="TDq-Nd-uK1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="leP-Ug-fuA"/>
+                            <constraint firstItem="FvR-Fg-Yz8" firstAttribute="centerX" secondItem="TDq-Nd-uK1" secondAttribute="centerX" id="pee-Y6-0OP"/>
+                            <constraint firstItem="TDq-Nd-uK1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="sPS-b1-xZ4"/>
+                            <constraint firstItem="vUm-K7-1SO" firstAttribute="trailing" secondItem="FvR-Fg-Yz8" secondAttribute="trailing" id="y3k-mg-pPb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
