@@ -22,6 +22,7 @@ class TodoListViewController: SwipeTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
 
@@ -35,7 +36,8 @@ class TodoListViewController: SwipeTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItemCell", for: indexPath)
+        
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
         if let item = todoItems?[indexPath.row] {
             
@@ -113,7 +115,7 @@ class TodoListViewController: SwipeTableViewController {
     
     }
     
-
+    //MARK: - Model Manipulation Methods
     
     func loadItems() {
         
@@ -121,6 +123,18 @@ class TodoListViewController: SwipeTableViewController {
 
         tableView.reloadData()
 
+    }
+    
+    override func updateModel(at indexPath: IndexPath) {
+        if let itemForDeletion = self.todoItems?[indexPath.row] {
+            do {
+                try self.realm.write {
+                    self.realm.delete(itemForDeletion)
+                }
+            } catch {
+                print("Error deleting item, \(error)")
+            }
+        }
     }
     
 
