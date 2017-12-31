@@ -15,6 +15,8 @@ class TodoListViewController: SwipeTableViewController {
     var todoItems : Results<Item>?
     let realm = try! Realm()
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     var selectedCategory : Category? {
         didSet{
             loadItems()
@@ -31,12 +33,40 @@ class TodoListViewController: SwipeTableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        if let colourHex = selectedCategory?.colour {
+        
+       title = selectedCategory?.name
+        
+        guard let colourHex = selectedCategory?.colour else { fatalError() }
+        
+        updateNavBar(withHexCode: colourHex)
+         
+    }
+    
+//    override func viewWillDisappear(_ animated: Bool) {
 //
-//            guard let navBar = navigationController?.navigationBar else {fatalError("Navigation controller does not exist.")}
-//
-//            navBar.barTintColor = UIColor(hexString: colourHex)
-//        }
+//        updateNavBar(withHexCode: "2B6CA3")
+//    }
+    
+    override func willMove(toParentViewController parent: UIViewController?) {
+        updateNavBar(withHexCode: "2B6CA3")
+    }
+    
+    //MARK: - Nav Bar Setup Methods
+    
+    func updateNavBar(withHexCode colourHexCode: String) {
+        
+        guard let navBar = navigationController?.navigationBar else {fatalError("Navigation controller does not exist.")}
+        
+        guard let navBarColour = UIColor(hexString: colourHexCode) else { fatalError()}
+        
+        navBar.barTintColor = navBarColour
+        
+        navBar.tintColor = ContrastColorOf(navBarColour, returnFlat: true)
+        
+        //                navBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: ContrastColorOf(navBarColour, returnFlat: true)]
+        
+        searchBar.barTintColor = navBarColour
+        
     }
     
     //MARK: Tableview Datasource Methods
@@ -58,7 +88,7 @@ class TodoListViewController: SwipeTableViewController {
             
                 let shade = colour.darken(byPercentage:CGFloat(indexPath.row) / CGFloat(todoItems!.count))
                 cell.backgroundColor = shade
-                cell.textLabel?.textColor = ContrastColorOf(colour, returnFlat: true)
+                cell.textLabel?.textColor = FlatWhite()
                 
             }
             
